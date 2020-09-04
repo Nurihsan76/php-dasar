@@ -1,0 +1,124 @@
+
+mysql> create database phpdasar
+    -> ; 
+Query OK, 1 row affected (0.05 sec)
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpdasar           |
+| phpmyadmin         |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use phpdasar
+Database changed
+mysql> create table mahasiswa (id int primary key  auto_increment, nama varchar (30), alamat varchar (100), hobi varchar (100), jurusan varchar (100) );
+Query OK, 0 rows affected (0.48 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_phpdasar |
++--------------------+
+| mahasiswa          |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> describe mahasiswa;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int(11)      | NO   | PRI | NULL    | auto_increment |
+| nama    | varchar(30)  | YES  |     | NULL    |                |
+| alamat  | varchar(100) | YES  |     | NULL    |                |
+| hobi    | varchar(100) | YES  |     | NULL    |                |
+| jurusan | varchar(100) | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> insert into mahasiswa values ('1', 'nur ihsan', 'bekasi', 'renang', 'TIK');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from mahasiswa;
++----+-----------+--------+--------+---------+
+| id | nama      | alamat | hobi   | jurusan |
++----+-----------+--------+--------+---------+
+|  1 | nur ihsan | bekasi | renang | TIK     |
++----+-----------+--------+--------+---------+
+1 row in set (0.01 sec)
+
+mysql> insert into mahasiswa values ('2', 'nurja', 'cikarang', 'sepedaan', 'MTK');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from mahasiswa;                                                 +----+-----------+----------+----------+---------+
+| id | nama      | alamat   | hobi     | jurusan |
++----+-----------+----------+----------+---------+
+|  1 | nur ihsan | bekasi   | renang   | TIK     |
+|  2 | nurja     | cikarang | sepedaan | MTK     |
++----+-----------+----------+----------+---------+
+2 rows in set (0.00 sec)
+
+mysql> insert into mahasiswa values ('3', 'sanjaya', 'cibarusah', 'cooding', 'PJOK');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from mahasiswa;                                                 +----+-----------+-----------+----------+---------+
+| id | nama      | alamat    | hobi     | jurusan |
++----+-----------+-----------+----------+---------+
+|  1 | nur ihsan | bekasi    | renang   | TIK     |
+|  2 | nurja     | cikarang  | sepedaan | MTK     |
+|  3 | sanjaya   | cibarusah | cooding  | PJOK    |
++----+-----------+-----------+----------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select hobi from mahasiswa;
++----------+
+| hobi     |
++----------+
+| renang   |
+| sepedaan |
+| cooding  |
++----------+
+3 rows in set (0.00 sec)
+
+mysql> select alamat, jurusan from mahasiswa;
++-----------+---------+
+| alamat    | jurusan |
++-----------+---------+
+| bekasi    | TIK     |
+| cikarang  | MTK     |
+| cibarusah | PJOK    |
++-----------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from mahasiswa where hobi = 'sepedaan';
++----+-------+----------+----------+---------+
+| id | nama  | alamat   | hobi     | jurusan |
++----+-------+----------+----------+---------+
+|  2 | nurja | cikarang | sepedaan | MTK     |
++----+-------+----------+----------+---------+
+1 row in set (0.05 sec)
+
+mysql> update mahasiswa set jurusan = 'IPA' where alamat = 'cibarusah';
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from mahasiswa;
++----+-----------+-----------+----------+---------+
+| id | nama      | alamat    | hobi     | jurusan |
++----+-----------+-----------+----------+---------+
+|  1 | nur ihsan | bekasi    | renang   | TIK     |
+|  2 | nurja     | cikarang  | sepedaan | MTK     |
+|  3 | sanjaya   | cibarusah | cooding  | IPA     |
++----+-----------+-----------+----------+---------+
+3 rows in set (0.00 sec)
+
+
+mysql> delete from mahasiswa where nama = 'nur ihsan';
+mysql> drop table mahasiswa;
+mysql> drop database phpdasar;
