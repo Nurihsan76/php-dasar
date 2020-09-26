@@ -30,7 +30,7 @@ mysql> show tables;
 +--------------------+
 1 row in set (0.00 sec)
 
-mysql> describe mahasiswa;
+mysql> desc mahasiswa;
 +---------+--------------+------+-----+---------+----------------+
 | Field   | Type         | Null | Key | Default | Extra          |
 +---------+--------------+------+-----+---------+----------------+
@@ -56,7 +56,8 @@ mysql> select * from mahasiswa;
 mysql> insert into mahasiswa values ('2', 'nurja', 'cikarang', 'sepedaan', 'MTK');
 Query OK, 1 row affected (0.04 sec)
 
-mysql> select * from mahasiswa;                                                 +----+-----------+----------+----------+---------+
+mysql> select * from mahasiswa;                                                 
++----+-----------+----------+----------+---------+
 | id | nama      | alamat   | hobi     | jurusan |
 +----+-----------+----------+----------+---------+
 |  1 | nur ihsan | bekasi   | renang   | TIK     |
@@ -67,7 +68,8 @@ mysql> select * from mahasiswa;                                                 
 mysql> insert into mahasiswa values ('3', 'sanjaya', 'cibarusah', 'cooding', 'PJOK');
 Query OK, 1 row affected (0.06 sec)
 
-mysql> select * from mahasiswa;                                                 +----+-----------+-----------+----------+---------+
+mysql> select * from mahasiswa;
++----+-----------+-----------+----------+---------+
 | id | nama      | alamat    | hobi     | jurusan |
 +----+-----------+-----------+----------+---------+
 |  1 | nur ihsan | bekasi    | renang   | TIK     |
@@ -118,7 +120,38 @@ mysql> select * from mahasiswa;
 +----+-----------+-----------+----------+---------+
 3 rows in set (0.00 sec)
 
+mysql> RENAME TABLE mahasiswa TO santri;
+Query OK, 0 rows affected (1.51 sec)
 
+mysql> SHOW TABLES;
++--------------------+
+| Tables_in_phpdasar |
++--------------------+
+| santri             |
++--------------------+
+1 row in set (0.00 sec)
+
+WHERE id < 2 AND hobi = "renang";
+WHERE id < 2 OR hobi = "renang";
+WHERE hobi IN ("renang", "cooding");
+WHERE id BEETWEN 1 AND 3 ;
+WHERE nama LIKE "n%";
+WHERE nama LIKE "%n";
+WHERE nama LIKE "%n%";
+WHERE nama LIKE "i___n";
+WHERE nama NOT LIKE "i___n";
+LIMIT 0,10;
+ORDER BY (column1) asc/desc, (column2) asc/desc;
+column1-column2 as newcolumn;
+ORDER BY FIELD((column), ("urutan1"), ("urutan2"))
+CONCET (column1, " ", column2) as nama lengkap;
+foreign key (namacolonm2) references namatabel1(namacolomn1)
+mysql> ALTER TABLE (namatabel) ADD COLUMN (namacolumn)(type) AFTER (namatabel),
+//constrint k_post_id foreidn key (post_id) references siswa(id);
+mysql> ALTER TABLE (namatabel) DROP COLUMN (namacolumn);
 mysql> delete from mahasiswa where nama = 'nur ihsan';
 mysql> drop table mahasiswa;
 mysql> drop database phpdasar;
+mysql> select * from film inner join penghubung inner join genre on film.id = penghubung.id_film and penghubung.id_genre = genre.id;
+mysql> select nama_film, id_film, id_genre, nama_genre from film inner join penghubung inner join genre on film.id = penghubung.id_film and penghubung.id_genre = genre.id;
+

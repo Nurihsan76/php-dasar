@@ -13,6 +13,10 @@ $buku = [
         "isbn" => "148112"
     ]
     ];
+
+//$i=true;
+//while ( $i){
+//function Pembukaan(){
 echo "====================="."\n";
 echo "|      Welcome      |"."\n";
 echo "====================="."\n";
@@ -28,9 +32,18 @@ print_r($buku);
 echo "1. fisika "." "."2. kimia "." "."3. biologi "."\n";
 echo "pilih buku : ";
 $pilihbuku = trim(fgets(STDIN));
+//}
+//$i=false;
 
-
-
+//     if ($pilihan == 'y'){
+// }elseif($pilihan == 'n'){
+//     echo "thx". "\n";
+//     $i=false;
+//     }else{
+//         echo "lol";
+//         $i=false;
+//     }
+//}
 class Perpustakaan{
     public $nama,
             $asal,
@@ -95,6 +108,11 @@ if ($pilihan == 1){
     echo "pilihan tidak tersedia";
 }
 
+// echo "(y/n)"."\n";
+// $pilih = trim(fgets(STDIN));
+// if echo ($pilih == "y"){
+//     echo pembukaan();
+// }
 
 
 

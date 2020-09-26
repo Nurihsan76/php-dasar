@@ -1,26 +1,80 @@
 <?php
 
+class register{
+    public static $santri = [
+        
+            "nama" => "nama",
+            "asal" => "asal"
+        
+    ];
+    public static function daftar(){
+        echo "MASUKAN DATA PEMBELI : \n";
+            echo "Nama : ";
+            self::$santri['nama'] = trim(fgets(STDIN));
+            echo "Usia : ";
+            self::$santri['asal'] = trim(fgets(STDIN));
+            
+}
+public static function output(){
+return self::$santri['nama'];
+
+}
+}
+register::daftar();
+register::output();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //function loop(){
 //return "(y/n)", $pilih = trim(fgets(STDIN));
 //}
 
 
-echo "(y/n)";
-$pilihan = trim(fgets(STDIN));
+// echo "(y/n)";
+// $pilihan = trim(fgets(STDIN));
 
-for ($i=true; $i>=$pilihan; $i++)
+// for ($i=true; $i>=$pilihan; $i++){
 
-if ($pilihan == 'y'){
-echo "(y/n)";
-$pilihan = trim(fgets(STDIN));
+// if ($pilihan == 'y'){
+// echo "(y/n)";
+// $pilihan = trim(fgets(STDIN));
 
-}elseif($pilihan == 'n'){
-echo "thx". "\n";
-$i=false;
-}else{
-    echo "lol";
-    $i=false;
-}
+// }elseif($pilihan == 'n'){
+// echo "thx". "\n";
+// $i=false;
+// }else{
+//     echo "lol"."\n";
+//     $i=false;
+// }
+// }
 // function numberDivision(int $x, int $y): float
 // {
 //     if ($y <= 0) {        
@@ -90,4 +144,6 @@ $i=false;
 // }else {
 // echo "pilihan tidak tersedia"."\n";
 // }
-// ?>
+// 
+
+?>

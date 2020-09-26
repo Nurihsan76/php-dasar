@@ -48,7 +48,16 @@ echo "($i,$a)";
 echo "<br>";
 
 }
+for ($i=0; $i<9; $i++){
+for ($a=0; $a<9; $a++){
 
+echo $a+$i . " ";
+
+}
+
+echo "<br>";
+
+}
 ?>
 <?php
 echo "<br> latihan4 <br><br>";
@@ -58,9 +67,9 @@ for ($i=0; $i<9; $i++){
 for ($a=0; $a<9; $a++) {
 
 if ($i %2 == 0) {
-  echo "+";
+  echo " _ ";
 } else {
-  echo " - ";
+  echo "+";
 }
 
 }
@@ -169,7 +178,7 @@ echo "<br>";
 
 ?>
 <?php
-echo "<br> latihan9 <br><br>";
+echo "<br> latihan10 <br><br>";
 
 for ($i=0; $i<9; $i++) {
 
