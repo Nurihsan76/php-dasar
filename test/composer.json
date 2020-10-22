@@ -1,0 +1,14 @@
+{
+    "name": "nurihsan/test",
+    "description": "testing",
+    "authors": [
+        {
+            "name": "Nurihsan76",
+            "email": "nurihsancahgft@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.1",
+        "nesbot/carbon": "^2.41"
+    }
+}

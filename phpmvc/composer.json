@@ -1,0 +1,16 @@
+{
+    "name": "nurihsan/mvc",
+    "description": "blajar",
+    "authors": [
+        {
+            "name": "Nurihsan76",
+            "email": "nurihsancahgft@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "core\\": "app/core/"
+        }
+    }
+}

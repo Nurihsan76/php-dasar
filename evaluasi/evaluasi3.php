@@ -66,7 +66,7 @@ public function hapus(){
     $show = $this->connect->prepare($query);
     $show->execute();
     $this->dataSantri();
-}
+    }
 
 // public function tambah(){
 //     $this->dataSantri();

@@ -1,0 +1,16 @@
+{
+    "name": "nurihsan/tes",
+    "description": "testing",
+    "authors": [
+        {
+            "name": "Nurihsan76",
+            "email": "nurihsancahgft@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "hewan\\": "hewan/"
+        }
+    }
+}

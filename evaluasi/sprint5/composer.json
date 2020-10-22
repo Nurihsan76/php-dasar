@@ -1,0 +1,14 @@
+{
+    "name": "nurihsan/evaluasi",
+    "description": "evaluasi",
+    "authors": [
+        {
+            "name": "Nurihsan76",
+            "email": "nurihsancahgft@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.41",
+        "guzzlehttp/guzzle": "^7.1"
+    }
+}
